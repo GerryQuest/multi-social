@@ -9,6 +9,8 @@ Auth.java
 /tests/*
 TwitterTests.java
 TwitterTest.java
+/icons
+/icons/*
 
 # BlueJ files
 *.ctxt
