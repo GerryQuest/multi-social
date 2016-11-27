@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" >
+<head>
+	<meta charset="utf-8">
+ 	<!-- If you delete this meta tag World War Z will become a reality -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test</title>
+	<link rel="stylesheet" href="css/normalize.css">
+  	<link rel="stylesheet" href="css/foundation.css">	
+	<!-- <link rel="stylesheet" href="css/index.css"> -->
+	<link rel="stylesheet" href="css/icons/foundation-icons.css">
+	<link rel="stylesheet" href="css/icons/fontello/css/fontello.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="lib/modernizr.js"></script>
+</head>
+<body>
+
+	<!-- <div class="row"> -->
+	
+		<div id="the-wrap" class="off-canvas-wrap" data-offcanvas>
+		<!-- page layout goes here -->
+			<div class="inner-wrap">
+				<!-- <nav class="tab-bar">
+					<section class="left-small">
+						<a class="left-off-canvas-toggle menu-icon"  href="#">
+							<span></span>
+						</a>
+					</section>
+					<section class="middle tab-bar-section">
+						<h2 class="title">Multi Social	</h2>
+					</section>
+					<section class="right-small">
+						<a id="search-menu" class="right-off-canvas-toggle menu-icon" href="#">
+							<span></span>
+						</a>
+					</section>
+				</nav> -->
+				<nav class="top-bar" data-topbar data-options="is_hover: false" role="navigation">
+				
+					<section class="top-bar-section">
+						<ul class="left">
+							<li>
+								<div class="row">
+									<div class="large-3 columns"></div>
+									<div class="large-8 columns">
+										<i id="showAddUserForm" class="icon-user-add" data-reveal-id="addUserModal"></i>
+										<i id="deleteUserProfile" class="icon-user-delete"></i>
+										<i id="showAddFeedForm" class="fi-plus" ></i>
+										<i id="deleteFeed" class="fi-minus" ></i>
+									</div>
+									<div class="large-1 columns"></div>
+									
+								</div>
+								
+							</li>
+						</ul>
+						<ul class="right">
+							
+							<!-- <li class="divider"></li> -->
+							<li>
+							<form>
+								<div class="row">
+									<div class="large-12 columns">
+										<div class="row collapse prefix-round">
+											<div class="small-2 columns">
+												<a href="#" class="button prefix">
+													<i class="fi-magnifying-glass"></i>
+												</a>
+											</div>
+											<div class="small-10 columns">
+												<input id="search-box" type="text" placeholder="Search">
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							</li>
+							<li class="divider"></li>
+							<li id="search">
+								<a id="search-menu" href="#">
+								<i id="menuIcon" class="icon-right-open"></i>
+								</a>
+							</li>
+						</ul>
+					</section>
+				</nav>
+				<div id="profile-status-bar">
+					...
+				</div>
+				
+				<nav class="left-off-canvas-menu">
+					<ul id="profile-list" class="off-canvas-list accordion" data-accordion></ul>
+					<!-- <ul id="profile-list" class="off-canvas-list accordion" data-accordion>
+				        <li><label>Following</label></li>
+				        <li class="accordion-navigation"><a href="#panel1a">The Psychohistorians</a>
+				        <div id="panel1a" class="content active">blahaha</div></li>
+				        <li><a href="#">...</a></li>
+				        <li><a href="#">The Psychohistorians</a></li>
+					    <li><a href="#">The Encyclopedists</a></li>
+					    <li><a href="#">The Mayors</a></li>
+					    <li><a href="#">The Traders</a></li>
+					    <li><a href="#">The Merchant Princes</a></li>
+				   	</ul> -->
+				</nav>
+				<nav class="right-off-canvas-menu">
+			      <ul class="off-canvas-list">
+			        <li>
+			        	<label>
+			        		Search
+			        		<span id="exit-right-menu" class="right">x</span>
+			        	</label>
+			        </li>
+			        <li><a href="#">Hari Seldon</a></li>
+			        <li><a href="#">...</a></li>
+			      </ul>
+			    </nav>
+			    <section class="main-section">
+			    	
+			    	<!-- Add user modal -->
+			    	<div id="addUserModal" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+					  <form id="addUserForm" name="addUserForm">
+					  	<div class="row">
+					  		
+					  		<div class="small-3 large-3 columns">
+					  			<div class="photo">
+					  					<a href="#">
+					  						<i class="fi-torso"></i>
+					  					</a>
+				  				</div>
+				  				<div id="add-photo">
+				  					<i class="fi-plus"></i>
+				  					Add Picture
+				  				</div>
+					  		</div>
+					  		<div id ="add-user-div" class="small-9 large-9 columns">
+					  			<div class="row">
+					  				<div class="small-9 large-11 columns">
+					  					<input name="name" type="text" placeholder="Name">	
+					  				</div>
+					  				
+					  				
+					  			</div>
+					  			<div class="row">
+					  				<div class="small-9 large-11 columns">
+					  					<input name="location" type="text" placeholder="Location">
+					  				</div>
+					  			</div>
+					  			<div class="row social-row">
+					  				<div class="small-9 large-11 columns">
+					  					<input name="socialMedia" type="text" placeholder="social media feed">
+					  				</div>
+					  				<div class="small-3 large-1 columns">
+					  					<a id="add-social" href="#" data-tooltip aria-haspopup="true" class="has-tip" title="Add another social media feed">
+					  					<i class="fi-plus"></i></a>
+					  				</div>
+					  				
+					  			</div>
+					  			<div class="row">
+					  				<div class="small-9 large-11 columns">
+					  					<input name="tags" type="text" placeholder="Tags separated by comma">
+					  				</div>
+					  			</div>
+					  		</div>
+					  	</div>
+					  </form>
+					  
+					  <div class="row">
+					  	
+					  	<div class="large-12 columns">
+					  		<ul class="button-group radius">
+					  		<li><a id="addUserButton" class="button small" href="#">Add</a></li>
+					  		<li><a id="cancelUserButton" class="button small" href="#">Cancel</a></li>
+					  		</ul>
+					  	</div>
+					  	
+					  </div>
+					  
+					  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+					</div>
+					
+					<!-- Add Feed Modal -->
+					<div id="addFeedModal" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+						<form id="addFeedForm" name="addFeedForm">
+							<div class="row">
+								<div class="small-11 large-12 text-centered columns">
+									<input id="feedInput" type="text" placeholder="http://instagram.com/random-name">
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-5 small-centered large-10 large-centered text-center columns">
+									<ul class="button-group">
+									<li><a id="add-feed-button" href="#" class="button small radius">Add</a></li>
+									<li><a id="cancel-feed-button" href="#" class="button small radius">Cancel</a></li>
+									</ul>
+								</div>
+								
+							</div>
+						</form>
+						
+						<a id="close-add-feed" class="close-reveal-modal" aria-label="Close">&#215;</a>
+					</div>
+					
+			      <!-- content goes here -->
+			      <div class="row">
+			      	<!-- <div class="large-4 columns">
+			      		...
+			      	</div> -->
+			      	<div id="content-overlay"></div>
+			      	<div id="main-content-area" class="large-12 columns">
+			      		
+			      		<ul id="enter" class="small-block-grid-2">
+				      		<li class="panel">ss</li>
+				      		<li class="panel">
+				      			<h6>Welcome to</h6>
+				      			<h2>Multi Social</h2>	
+				      		</li>
+				      		
+				      	</ul>
+			      	</div>
+			      
+			    </section>
+			
+			  	<!-- <a class="exit-off-canvas"></a> -->
+			  	<!-- <button class="exit-off-canvas"></button> -->
+			</div>
+		</div>
+		<!-- <div class="large-3 columns">...</div>
+		<div class="large-6 columns">...</div>
+		<div class="large-3 columns">...</div> -->
+	<!-- </div> -->
+
+	<div id="hey"></div>
+	<div id="templates"></div>
+	<script src="lib/jquery.js"></script>
+  	<script src="lib/foundation.min.js"></script>
+  	<script src="lib/foundation.offcanvas.js"></script>
+  	<script>
+    	$(document).foundation();
+  	</script>
+	<!-- <script type="application/javascript" src="lib/slideout.min.js"></script> -->
+	<script id="user-profiles-tmpl" type="text/mustache">
+	
+		<li><label>User Profiles</label></li>
+		{{#profiles}}
+			<li class="accordion-navigation" >
+				<a href="#{{accordionID}}{{id}}" data-id="{{id}}">{{name}}</a>
+
+				{{#socialMediaURL}}				
+					<span class="social-url" data-social="{{.}}"></span>
+				{{/socialMediaURL}}
+
+				{{#socialMediaHandle}}
+					<div id="{{accordionID}}{{id}}" class="content">
+					{{.}}
+					</div>
+				{{/socialMediaHandle}}
+				
+			</li>
+		{{/profiles}}
+	
+	</script>
+	<script id="single-user-profile" type="text/mustache">
+		{{#profiles}}
+			<li class="accordion-navigation" >
+				<a href="#{{accordionID}}{{id}}" data-id="{{id}}">{{name}}</a>
+
+				{{#socialMediaURL}}				
+					<span class="social-url" data-social="{{.}}"></span>
+				{{/socialMediaURL}}
+
+				{{#socialMediaHandle}}
+					<div id="{{accordionID}}{{id}}" class="content">
+					{{.}}
+					</div>
+				{{/socialMediaHandle}}
+				
+			</li>
+		{{/profiles}}
+	</script>
+	<script id="profile-single-feed" type="text/mustache">
+	{{#profiles}}
+		{{#socialMediaURL}}				
+					<span class="social-url" data-social="{{.}}"></span>
+		{{/socialMediaURL}}
+
+		{{#socialMediaHandle}}
+
+			<div id="{{accordionID}}{{id}}" class="content active">
+				{{.}}
+			</div>
+		{{/socialMediaHandle}}
+	{{/profiles}}
+	</script>
+	<script id="profile-feed-url-span" type="text/mustache">
+		{{#profiles}}
+			{{#socialMediaURL}}				
+				<span class="social-url" data-social="{{.}}"></span>
+			{{/socialMediaURL}}
+		{{/profiles}}
+	</script>
+	
+	<script id="profile-feed-div" type="text/mustache">
+		{{#profiles}}
+			{{#socialMediaHandle}}
+				<div id="{{accordionID}}{{id}}" class="content active">
+					{{.}}
+				</div>
+			{{/socialMediaHandle}}
+		{{/profiles}}
+	</script>
+	
+	<script id="instagram-user-profile" type="text/mustache">
+
+	<ul id="content-area" class="small-block-grid-2">
+		{{#profile}}
+			{{#embed}}
+				
+				<li class="">{{{.}}}</li>
+			{{/embed}}
+		{{/profile}}
+	</ul>
+
+
+		
+	</script>
+	<script id="status-bar-template" type="text/mustache">
+	<nav class="top-bar" data-topbar role="navigation">
+			<ul class="title-area">
+				<li class="name">
+					<h1><a href="#">{{#profile}}{{handle}}{{/profile}}</a></h1>
+				</li>
+				 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			</ul>
+		<section class="top-bar-section">
+    		<!-- Right Nav Section -->
+    		<ul class="right">
+      		<li class="active"><a href="#">Right Button Active</a></li>
+      		<li class="has-dropdown">
+        		<a href="#">Right Button Dropdown</a>
+        		<ul class="dropdown">
+          			<li><a href="#">First link in dropdown</a></li>
+          			<li class="active"><a href="#">Active link in dropdown</a></li>
+        		</ul>
+     	 	</li>
+    	</ul>
+	</nav>
+	</script>
+	<script id="youtube-vid-template" type="text/mustache">
+	<ul id="ytb-content-area" class="small-block-grid-2"
+	
+	{{#profile}}
+		{{#ytb}}
+			<li>
+				<img src="{{thumb}}" class="ytb-thumb" data-videoid={{videoid}}>
+			</li>
+		{{/ytb}}
+	{{/profile}}
+	</ul>
+	</script>
+	
+	<script id="ytb-single-vid-template" type="text/mustache">
+	<ul id="ytb-content-area" class="small-block-grid-1">
+
+			<li>
+				<iframe id="ytplayer" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/{{videoid}}?autoplay=0&controls=2&rel=0&origin=youtube.com" frameborder="0" />
+			</li>
+	</ul>
+	</script>
+	
+	<script type="application/javascript" src="lib/mustache.min.js"></script>
+	<script type="application/javascript" src="lib/spin.min.js"></script>
+	<!-- <script src="//platform.instagram.com/en_US/embeds.js"></script> -->
+	<script type="application/javascript" src="lib/embeds.js"></script>
+	<script type="application/javascript" src="lib/instagram.js"></script>
+	<script type="application/javascript" src="lib/youtube.js"></script>
+	<script type="application/javascript" src="lib/app.js"></script>
+	<span id="response"></span>
+</body>
+</html>
